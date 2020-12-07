@@ -1,0 +1,10 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "react webpack demo",
+  "main": "index.js",
+  "repository": "https://github.com/zhuqinqin/webpack-react.git",
+  "author": "zqq",
+  "license": "1.0.1",
+  "private": true
+}
