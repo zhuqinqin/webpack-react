@@ -36,9 +36,9 @@
     - $ npm install --save-dev babel-preset-stage-2
     - $ npm install --save-dev babel-preset-stage-3
 
-    使用babel插件transform-object-rest-spread,作用：对象使用spread操作符
-    - https://link.jianshu.com/?t=http://babeljs.io/docs/plugins/transform-object-rest-spread/
-    - yarn add babel-plugin-transform-object-rest-spread -D
+ > - 使用babel插件transform-object-rest-spread,作用：对象使用spread操作符
+     https://link.jianshu.com/?t=http://babeljs.io/docs/plugins/transform-object-rest-spread/
+     yarn add babel-plugin-transform-object-rest-spread -D
 7. 在项目文件夹下配置`webpack.config.js`文件，并在配置文件中添加对JSX语法的Babel编译支持
 8. 设置 entry js
 9. `yarn add html-webpack-plugin -D`
@@ -49,13 +49,14 @@
         - 使用 webpack serve --open 命令启动
   
 ## 项目目录结构说明
-![描述] (图片链接地址)
+
+- ![图片名称](图片链接地址)
 ---
 ----
 '***'
 '*****'
 (`行内代码块`)
-        四个缩进空格，表示代码块
+    四个缩进空格，表示代码块
 [toc]
 
 
