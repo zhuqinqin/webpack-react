@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --open Chrome.exe" ,
+    "start": "webpack serve --open Chrome.exe",
     "start-test": "webpack-dev-server --mode development --open"
   },
   "devDependencies": {
@@ -24,7 +24,10 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"

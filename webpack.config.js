@@ -13,10 +13,11 @@ module.exports = {
   },
   //指定打包的入口文件，每有一个键值对，就是一个入口文件 output：配置打包结果，path定义了输出的文件夹，filename则定义了打包结果文件的名称
   entry: './src/index.js',
-  /* output: {
-    path: __dirname + '/assets',
-    filename: 'bundle.js'
-  }, */
+  output: {
+    //把一个路径或路径片段的序列解析为一个绝对路径
+    path: path.resolve(__dirname, "build"),
+    filename: 'js/[name].[chunkhash].js'
+  },
   //定义了解析模块路径时的配置，常用的就是extensions，可以用来指定模块的后缀，这样在引入模块时就不需要写后缀了，会自动补全
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
@@ -25,24 +26,30 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/, // jsx/js文件的正则
+        test: /\.(js|jsx)$/, // jsx/js文件的正则
         exclude: /node_modules/, // 排除 node_modules 文件夹
         use: {
           loader: 'babel-loader',
           options: {
               // babel 转义的配置选项
-              babelrc: false,
-              presets: [
+              //babelrc: false,
+              /* presets: [
                 // 添加 preset-react
                 require.resolve('@babel/preset-react'),
                 [require.resolve('@babel/preset-env'), {modules: false}]
-              ],
-
-            //babelrc: true,
+              ], */
             cacheDirectory: true
           }
         }
-      }
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
     ]
   },
   plugins: [
