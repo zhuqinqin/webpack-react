@@ -29,23 +29,33 @@
 4. `yarn add webpack webpack-cli -D`
 5. `yarn add babel babel-loader @babel/core @babel/preset-env -D`
 6. `yarn add @babel/preset-react -D`
-  - 可选`# ES2015转码规则 $ npm install --save-dev babel-preset-es2015`
-  # ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
-  - $ npm install --save-dev babel-preset-stage-0
-  - $ npm install --save-dev babel-preset-stage-1
-  - $ npm install --save-dev babel-preset-stage-2
-  - $ npm install --save-dev babel-preset-stage-3
+ >  - 可选`# ES2015转码规则 $ npm install --save-dev babel-preset-es2015`
+    - ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
+    - $ npm install --save-dev babel-preset-stage-0
+    - $ npm install --save-dev babel-preset-stage-1
+    - $ npm install --save-dev babel-preset-stage-2
+    - $ npm install --save-dev babel-preset-stage-3
 
-  - # 使用babel插件transform-object-rest-spread,作用：对象使用spread操作符
-  - https://link.jianshu.com/?t=http://babeljs.io/docs/plugins/transform-object-rest-spread/
-  - yarn add babel-plugin-transform-object-rest-spread -D
+    使用babel插件transform-object-rest-spread,作用：对象使用spread操作符
+    - https://link.jianshu.com/?t=http://babeljs.io/docs/plugins/transform-object-rest-spread/
+    - yarn add babel-plugin-transform-object-rest-spread -D
 7. 在项目文件夹下配置`webpack.config.js`文件，并在配置文件中添加对JSX语法的Babel编译支持
 8. 设置 entry js
 9. `yarn add html-webpack-plugin -D`
- - 执行打包命令`npx webpack --mode development`
+  > - 执行打包命令`npx webpack --mode development`
 10. 设置react项目的本地服务
-  - `yarn add webpack-dev-server -D` 
-    - webpack 5 与 webpack-dev-server 3兼容性问题
-      - 使用 webpack serve --open 命令启动
+  > - `yarn add webpack-dev-server -D` 
+      - webpack 5 与 webpack-dev-server 3兼容性问题
+        - 使用 webpack serve --open 命令启动
   
 ## 项目目录结构说明
+![描述] (图片链接地址)
+---
+----
+'***'
+'*****'
+(`行内代码块`)
+        四个缩进空格，表示代码块
+[toc]
+
+
