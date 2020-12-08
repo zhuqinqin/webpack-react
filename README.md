@@ -1,12 +1,14 @@
 # webpack-react
 使用 Webpack 对 React 做开发的最基础配置
 
-## 开发工具版本说明【
+
+## 开发工具版本说明
 * `webpack ^5.10.0`
 * `yarn 1.21.1`
 * `node 12.13.1`
 * `npm 6.9.0`
 * `react ^17.0.1`
+
 
 ## 配置流程
 1. `git clone` 项目
@@ -34,6 +36,7 @@
         - 使用 webpack serve --open 命令启动
   > - [配置.babelrc](https://babeljs.io/docs/en/configuration)
     - [babel-presets-doc](https://www.babeljs.cn/docs/presets)
+
 
 ## 参考：yarn && npm compare 
 * npm	yarn
