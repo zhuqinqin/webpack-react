@@ -31,13 +31,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-              // babel 转义的配置选项
-              //babelrc: false,
-              /* presets: [
-                // 添加 preset-react
-                require.resolve('@babel/preset-react'),
-                [require.resolve('@babel/preset-env'), {modules: false}]
-              ], */
             cacheDirectory: true
           }
         }
@@ -49,7 +42,7 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
-      },
+      }
     ]
   },
   plugins: [

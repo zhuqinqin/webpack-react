@@ -9,9 +9,8 @@
         }
       }
     ],
-    [
-      "@babel/react"
-    ]
+    ["@babel/react"],
+    ["@babel/preset-typescript"]
   ],
   "plugins": ["transform-object-rest-spread"]
 }
