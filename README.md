@@ -1,26 +1,12 @@
 # webpack-react
 使用 Webpack 对 React 做开发的最基础配置
 
-##开发工具版本说明
+## 开发工具版本说明【
 * `webpack ^5.10.0`
 * `yarn 1.21.1`
 * `node 12.13.1`
 * `npm 6.9.0`
 * `react ^17.0.1`
-
-
-## yarn && npm compare
-* npm	yarn
-* npm install	yarn
-* npm install react --save	yarn add react
-* npm uninstall react --save	yarn remove react
-* npm install react --save-dev	yarn add react --dev
-* npm update --save	yarn upgrade
-
-* 安装所有依赖项：yarn或yarn install
-* 安装一个且只有一个版本的软件包： yarn install --flat
-* 强制重新下载所有软件包： yarn install --force
-* 只安装生产依赖关系： yarn install --production
 
 ## 配置流程
 1. `git clone` 项目
@@ -47,16 +33,17 @@
       - webpack 5 与 webpack-dev-server 3兼容性问题
         - 使用 webpack serve --open 命令启动
   > - [配置.babelrc](https://babeljs.io/docs/en/configuration)
+    - [babel-presets-doc](https://www.babeljs.cn/docs/presets)
 
-## 项目目录结构说明
-
-- ![图片名称](图片链接地址)
----
-----
-'***'
-'*****'
-(`行内代码块`)
-        四个缩进空格，表示代码块
-
-
+## 参考：yarn && npm compare 
+* npm	yarn
+* npm install	yarn
+* npm install react --save	yarn add react
+* npm uninstall react --save	yarn remove react
+* npm install react --save-dev	yarn add react --dev
+* npm update --save	yarn upgrade
+* 安装所有依赖项：yarn或yarn install
+* 安装一个且只有一个版本的软件包： yarn install --flat
+* 强制重新下载所有软件包： yarn install --force
+* 只安装生产依赖关系： yarn install --production
 
