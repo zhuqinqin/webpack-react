@@ -34,6 +34,19 @@ module.exports = {
             cacheDirectory: true
           }
         }
+      },
+      {
+        // 处理图片资源,但是处理不了html中img的路径问题
+        test: /\.(jpg|png|gif)$/,
+        loader:'url-loader',
+        options:{
+            limit: 8* 1024,
+            // 关闭es6
+            esModule:false,
+            name:'[name].[hash:16].[ext]', // 文件名.hash.文件扩展名 默认格式为[hash].[ext]，没有文件名
+            outputPath: "assets/image", // 为你的文件配置自定义 output 输出目录 ; 用来处理图片路径问题
+            publicPath: "assets/image" // 为你的文件配置自定义 public 发布目录 ; 用来处理图片路径问题
+        },
       }
     ]
   },
