@@ -25,6 +25,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.10.0",
