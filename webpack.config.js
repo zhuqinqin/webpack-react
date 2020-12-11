@@ -47,6 +47,10 @@ module.exports = {
             outputPath: "assets/image", // 为你的文件配置自定义 output 输出目录 ; 用来处理图片路径问题
             publicPath: "assets/image" // 为你的文件配置自定义 public 发布目录 ; 用来处理图片路径问题
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
