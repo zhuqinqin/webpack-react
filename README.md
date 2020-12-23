@@ -36,9 +36,16 @@
         - 使用 webpack serve --open 命令启动
   > - [配置.babelrc](https://babeljs.io/docs/en/configuration)
     - [babel-presets-doc](https://www.babeljs.cn/docs/presets)
+    todolist: 
+    - config loaders
+    - eslint
+11. 配置css-loader、sass-loader
+  > - `yarn add @babel/preset-react -D`
+12. `npm i --save-dev mini-css-extract-plugin` 配置 抽离样式变成引用文件
 
 
-## 参考：yarn && npm compare 
+
+## 参考：yarn && npm compare
 * npm	yarn
 * npm install	yarn
 * npm install react --save	yarn add react

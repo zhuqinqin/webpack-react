@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+console.log(path.resolve(__dirname, "./build"))
 module.exports = {
   mode: 'development',
   devServer: {
@@ -46,21 +48,15 @@ module.exports = {
             name:'[name].[hash:16].[ext]', // 文件名.hash.文件扩展名 默认格式为[hash].[ext]，没有文件名
             outputPath: "assets/image", // 为你的文件配置自定义 output 输出目录 ; 用来处理图片路径问题
             publicPath: "assets/image" // 为你的文件配置自定义 public 发布目录 ; 用来处理图片路径问题
-        },
+        }
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader'},
-          {
-            loader: 'sass-loader'
-          }
+          MiniCssExtractPlugin.loader,
+          {loader: "css-loader"},
+          {loader: "sass-loader"}
         ]
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
       }
     ]
   },
@@ -69,6 +65,10 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html',
       inject: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     })
   ]
 }

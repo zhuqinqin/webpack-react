@@ -1,5 +1,6 @@
 import React from 'react';
 import Component2 from './Component2.jsx'
+import '../css/normal.css'
 class Component1 extends React.Component {
   render() {
     return (
