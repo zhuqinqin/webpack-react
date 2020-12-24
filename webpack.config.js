@@ -1,7 +1,21 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-console.log(path.resolve(__dirname, "./build"))
+
+/**
+ *  __dirname      node全局变量  存储的是文件所在的文件目录
+ *  __filename     node全局变量  存储的是文件名
+ *  path.resolve   将一个字符串解析到一个绝对路径里。
+ *  resolve - extensions 定义了解析模块路径时的配置，常用的就是extensions，可以用来指定模块的后缀，这样在引入模块时就不需要写后缀了，会自动补全
+ *  entry          指定打包的入口文件，每有一个键值对，就是一个入口文件 output：配置打包结果，path定义了输出的文件夹，filename则定义了打包结果文件的名称
+ *  module - ruler 定义了对模块的处理逻辑，这里可以用loaders定义了一系列的加载器，以及一些正则。当需要加载的文件匹配test的正则时，就会调用后面的loader对文件进行处理
+*/
+
+//常用路径
+const ROOT_PATH = path.resolve(__dirname); //获取当前文件路径
+const APP_PATH = path.resolve(ROOT_PATH, 'entry') //获取文件入口脚本的路径
+const BUILD_PATH = path.resolve(ROOT_PATH, 'build') //获取打包文件的输入位置
+
 module.exports = {
   mode: 'development',
   devServer: {
@@ -13,18 +27,14 @@ module.exports = {
       colors: true
     }
   },
-  //指定打包的入口文件，每有一个键值对，就是一个入口文件 output：配置打包结果，path定义了输出的文件夹，filename则定义了打包结果文件的名称
   entry: './src/index.js',
   output: {
-    //把一个路径或路径片段的序列解析为一个绝对路径
-    path: path.resolve(__dirname, "build"),
+    path: BUILD_PATH,
     filename: 'js/[name].[chunkhash].js'
   },
-  //定义了解析模块路径时的配置，常用的就是extensions，可以用来指定模块的后缀，这样在引入模块时就不需要写后缀了，会自动补全
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
   },
-  //定义了对模块的处理逻辑，这里可以用loaders定义了一系列的加载器，以及一些正则。当需要加载的文件匹配test的正则时，就会调用后面的loader对文件进行处理
   module: {
     rules: [
       {
